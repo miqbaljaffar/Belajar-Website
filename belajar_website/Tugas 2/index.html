@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasa Pembuatan Website Profesional</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS for animations and design */
+    .hero {
+      background: url('images/image1.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .card-service {
+      transition: transform 0.3s;
+    }
+    .card-service:hover {
+      transform: scale(1.05);
+    }
+    .portfolio-item img {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-item img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .footer {
+      background: #343a40;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero text-center">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">Solusi Pembuatan Website Profesional</h1>
+      <p class="animate__animated animate__fadeInUp">Kami menghadirkan layanan pembuatan website berkualitas untuk bisnis Anda.</p>
+      <a href="login.html" class="btn btn-light btn-lg mr-2 animate__animated animate__fadeInLeft">Login</a>
+      <a href="register.html" class="btn btn-primary btn-lg animate__animated animate__fadeInRight">Daftar Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Tentang Kami -->
+  <div class="about container my-5 text-center">
+    <h2 class="text-center animate__animated animate__fadeIn">Tentang Kami</h2>
+    <p class="fade-in">Kami adalah perusahaan penyedia layanan pengembangan website yang berdedikasi untuk membantu bisnis Anda berkembang di dunia digital.</p>
+  </div>
+
+  <!-- Layanan Kami -->
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Layanan Kami</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card card-service animate__animated animate__zoomIn">
+          <div class="card-body text-center">
+            <h5 class="card-title">Desain Website</h5>
+            <p class="card-text">Desain responsif dan modern untuk website Anda.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-service animate__animated animate__zoomIn animate__delay-1s">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pengembangan Web</h5>
+            <p class="card-text">Pengembangan web profesional dengan teknologi terbaru.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-service animate__animated animate__zoomIn animate__delay-2s">
+          <div class="card-body text-center">
+            <h5 class="card-title">SEO dan Marketing</h5>
+            <p class="card-text">Meningkatkan visibilitas bisnis Anda secara online.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mengapa Memilih Kami -->
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Mengapa Memilih Kami?</h2>
+    <p class="text-center">Kami berkomitmen untuk memberikan hasil terbaik bagi pelanggan kami.</p>
+    <ul class="list-group mt-4">
+      <li class="list-group-item animate__animated animate__fadeInLeft">✅ Tim ahli dengan pengalaman luas.</li>
+      <li class="list-group-item animate__animated animate__fadeInLeft animate__delay-1s">✅ Teknologi terbaru dan metode pengembangan.</li>
+      <li class="list-group-item animate__animated animate__fadeInLeft animate__delay-2s">✅ Layanan pelanggan yang responsif.</li>
+      <li class="list-group-item animate__animated animate__fadeInLeft animate__delay-3s">✅ Proyek tepat waktu dan sesuai anggaran.</li>
+    </ul>
+  </div>
+
+  <!-- Langkah Pemesanan Layanan -->
+  <div class="container my-5 steps text-center">
+    <h2 class="text-center animate__animated animate__fadeIn">Langkah Pemesanan Layanan</h2>
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <div class="step animate__animated animate__fadeInUp">
+          <img src="images/image2.png" alt="Konsultasi" class="img-fluid mb-3">
+          <h5>Konsultasi</h5>
+          <p>Konsultasi kebutuhan bisnis Anda.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="step animate__animated animate__fadeInUp animate__delay-1s">
+          <img src="images/image2.png" alt="Desain" class="img-fluid mb-3">
+          <h5>Desain</h5>
+          <p>Pembuatan desain yang sesuai.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="step animate__animated animate__fadeInUp animate__delay-2s">
+          <img src="images/image2.png" alt="Pengembangan" class="img-fluid mb-3">
+          <h5>Pengembangan</h5>
+          <p>Proses pengembangan website.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="step animate__animated animate__fadeInUp animate__delay-3s">
+          <img src="images/image2.png" alt="Selesai" class="img-fluid mb-3">
+          <h5>Selesai</h5>
+          <p>Website siap digunakan!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Kami -->
+  <div class="portfolio container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Portfolio Kami</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="portfolio-item animate__animated animate__zoomIn">
+          <img src="images/image1.jpg" class="img-fluid rounded shadow">
+          <p>Project 1 - Website Company Profile</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="portfolio-item animate__animated animate__zoomIn animate__delay-1s">
+          <img src="images/image1.jpg" class="img-fluid rounded shadow">
+          <p>Project 2 - E-commerce Platform</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="portfolio-item animate__animated animate__zoomIn animate__delay-2s">
+          <img src="images/image1.jpg" class="img-fluid rounded shadow">
+          <p>Project 3 - Website Pendidikan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimoni Klien -->
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Testimoni Klien</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="testimonial animate__animated animate__fadeInUp">
+          <p>"Layanan yang sangat profesional! Website kami terlihat luar biasa dan berfungsi dengan baik!"</p>
+          <p><strong>- Asep</strong></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial animate__animated animate__fadeInUp animate__delay-1s">
+          <p>"Sangat puas dengan hasil kerja tim. Pengembangan website sangat cepat dan responsif."</p>
+          <p><strong>- Budi</strong></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial animate__animated animate__fadeInUp animate__delay-2s">
+          <p>"Kualitas layanan dan dukungan sangat memuaskan. Saya merekomendasikan kepada semua teman saya!"</p>
+          <p><strong>- Siti</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer text-center">
+    <p>&copy; 2024 Mohammad Iqbal Jaffar</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

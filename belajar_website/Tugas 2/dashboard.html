@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pengguna</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Custom styling */
+    .card {
+      transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container -->
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeInDown">Dashboard Anda</h2>
+    <p class="text-center animate__animated animate__fadeInDown animate__delay-1s">Selamat datang di area pengguna!</p>
+
+    <!-- Card Section -->
+    <div class="row">
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-1s">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Profil</h5>
+            <p class="card-text">Lihat dan ubah informasi akun Anda.</p>
+            <a href="#" class="btn btn-primary">Lihat Profil</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-2s">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Pesanan Layanan</h5>
+            <p class="card-text">Cek status layanan yang telah Anda pesan.</p>
+            <a href="#" class="btn btn-warning">Lihat Pesanan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-3s">
+        <div class="card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Logout</h5>
+            <p class="card-text">Keluar dari akun Anda.</p>
+            <a href="index.html" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistik Pengguna -->
+    <div class="statistics my-5">
+      <h3 class="animate__animated animate__fadeInUp">Statistik Pengguna</h3>
+      <canvas id="orderStatusChart" width="400" height="200" class="animate__animated animate__fadeInUp animate__delay-1s"></canvas>
+      <button class="btn btn-info mt-3 animate__animated animate__fadeInUp animate__delay-2s" onclick="showStats()">Lihat Statistik Lengkap</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer text-center">
+    <p>&copy; 2024 Mohammad Iqbal Jaffar</p>
+  </div>
+
+  <!-- Chart and Animation Scripts -->
+  <script>
+    // Data and settings for order status chart
+    const ctx = document.getElementById('orderStatusChart').getContext('2d');
+    const orderStatusChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Selesai', 'Dalam Proses', 'Dibatalkan'],
+        datasets: [{
+          label: 'Status Pesanan',
+          data: [12, 19, 3],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 99, 132, 1)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Grafik Status Pesanan'
+          }
+        }
+      }
+    });
+
+    // Show more stats
+    function showStats() {
+      alert('Statistik Lengkap Akan Segera Tersedia!');
+    }
+  </script>
+</body>
+</html>
