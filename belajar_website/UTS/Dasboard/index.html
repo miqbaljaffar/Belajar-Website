@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pengguna</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head> 
+<body>
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Dashboard Anda</h2>
+    <p class="text-center animate__animated animate__fadeIn">Selamat datang di area pengguna!</p>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Profil</h5>
+            <p class="card-text">Lihat dan ubah informasi akun Anda.</p>
+            <a href="#" class="btn btn-primary">Lihat Profil</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Pesanan Layanan</h5>
+            <p class="card-text">Cek status layanan yang telah Anda pesan.</p>
+            <a href="#" class="btn btn-warning">Lihat Pesanan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Logout</h5>
+            <p class="card-text">Keluar dari akun Anda.</p>
+            <a href="../Halaman-Awal/index.html" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Statistik Pengguna</h3>
+      <canvas id="orderStatusChart" width="400" height="200"></canvas>
+      <button class="btn btn-info mt-3" onclick="showStats()">Lihat Statistik Lengkap</button>
+    </div>
+
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Riwayat Pesanan</h3>
+      <table class="table table-striped animate__animated animate__fadeIn">
+        <thead>
+          <tr>
+            <th>ID Pesanan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>01/01/2024</td>
+            <td>Selesai</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td>02/01/2024</td>
+            <td>Dalam Proses</td>
+          </tr>
+          <tr>
+            <td>#003</td>
+            <td>03/01/2024</td>
+            <td>Dibatalkan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Aktivitas Terakhir</h3>
+      <ul class="list-group animate__animated animate__fadeIn">
+        <li class="list-group-item ">Anda telah mengubah profil Anda pada 01/01/2024.</li>
+        <li class="list-group-item">Anda memesan layanan pada 02/01/2024.</li>
+        <li class="list-group-item">Anda keluar pada 03/01/2024.</li>
+      </ul>
+    </div>
+
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Panel Informasi</h3>
+      <div class="alert alert-info animate__animated animate__fadeIn" role="alert">
+        Ini adalah panel informasi yang memberikan tips dan berita terbaru tentang layanan kami. Pastikan untuk memeriksa pembaruan terbaru!
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center footer">
+    <p>&copy; 22552011031 Mohammad Iqbal Jaffar</p>
+  </div>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
