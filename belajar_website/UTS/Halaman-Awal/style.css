@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image1.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 0;
+}
+
+/* Card Service */
+.card-service {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+.testimonial {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio */
+.portfolio-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+}
+.testimonial {
+  display: none; /* Sembunyikan semua testimoni secara default */
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image1.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 0;
+}
+
+/* Card Service */
+.card-service {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+.testimonial {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio */
+.portfolio-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding:  20px 0;
+  width: 100%;
+}
+.testimonial {
+  display: none; /* Sembunyikan semua testimoni secara default */
+}
+.modal-body ul {
+  padding-left: 20px;
+  list-style-type: disc; /* Tampilkan poin sebagai lingkaran kecil */
+}
+
+.modal-body ul li {
+  margin-bottom: 10px; /* Spasi antar poin */
+  line-height: 1.5; /* Jarak antar baris */
+}
