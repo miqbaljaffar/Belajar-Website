@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.card-service {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+}
+
+.alert {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pengguna</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head> 
+<body>
+  <div class="container my-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Dashboard Anda</h2>
+    <p class="text-center animate__animated animate__fadeIn">Selamat datang di area pengguna!</p>
+
+    <div class="row">
+      <!-- Profil Section -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Profil</h5>
+            <p class="card-text">Lihat dan ubah informasi akun Anda.</p>
+            <a href="#" class="btn btn-primary">Lihat Profil</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pesanan Layanan Section -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Pesanan Layanan</h5>
+            <p class="card-text">Cek status layanan yang telah Anda pesan.</p>
+            <a href="#" class="btn btn-warning">Lihat Pesanan</a>
+          </div>
+        </div>
+      </div>
+      <!-- Logout Section -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">Logout</h5>
+            <p class="card-text">Keluar dari akun Anda.</p>
+            <a href="../Halaman-Awal/index.html" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifikasi -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Pesanan Anda telah selesai!</strong> Terima kasih telah menggunakan layanan kami.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- Statistik Pengguna -->
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Statistik Pengguna</h3>
+      <canvas id="orderStatusChart" width="400" height="200"></canvas>
+      <button class="btn btn-info mt-3" onclick="showStats()">Lihat Statistik Lengkap</button>
+    </div>
+
+    <!-- Riwayat Pesanan -->
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Riwayat Pesanan</h3>
+      <input type="text" class="form-control mb-3" id="searchOrder" placeholder="Cari Pesanan...">
+      <table class="table table-striped animate__animated animate__fadeIn">
+        <thead>
+          <tr>
+            <th>ID Pesanan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>01/01/2024</td>
+            <td>Selesai</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td>02/01/2024</td>
+            <td>Dalam Proses</td>
+          </tr>
+          <tr>
+            <td>#003</td>
+            <td>03/01/2024</td>
+            <td>Dibatalkan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Profil Pengguna -->
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">Profil Pengguna</h3>
+      <div class="card">
+        <div class="card-body">
+          <img src="images\WhatsApp Image 2024-11-26 at 10.54.00.jpeg" alt="Foto Profil" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+          <p class="card-text">Nama: Mohammad Iqbal Jaffar</p>
+          <p class="card-text">Email: iqbal@example.com</p>
+          <p class="card-text">Alamat: Jl. Contoh No. 123, Jakarta</p>
+          <a href="#" class="btn btn-primary">Edit Profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="my-5">
+      <h3 class="animate__animated animate__fadeIn">FAQ</h3>
+      <div class="accordion" id="faqAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Apa yang dimaksud dengan status pesanan?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+            <div class="card-body">
+              Status pesanan menunjukkan keadaan terkini dari pesanan yang Anda buat. Ini bisa berupa "Selesai", "Dalam Proses", atau "Dibatalkan".
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center footer">
+      <p>&copy; 2024 Mohammad Iqbal Jaffar</p>
+    </div>
+  </div>
+
+  <script src="scripts.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
